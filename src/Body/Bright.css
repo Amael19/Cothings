@@ -1,0 +1,129 @@
+/* Navbar */
+.bright-navbar ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.bright-navbar ul li {
+  position: relative;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Sous-menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  color: black;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* ------------ PARTIE CARROUSEL ------------ */
+
+/* Wrapper principal */
+.bright-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+/* Carousel visible */
+.bright-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Carrousel intérieur */
+.bright {
+  display: flex;
+  align-items: center;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+/* Images */
+.bright img {
+  height: 300px;
+  width: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Animation du carrousel */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Flèches du carrousel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 20;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}

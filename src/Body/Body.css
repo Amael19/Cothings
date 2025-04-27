@@ -1,0 +1,4 @@
+.body {
+    display: flex;
+    height: 400px; /* Hauteur totale moins le Header */
+  }

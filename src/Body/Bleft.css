@@ -1,0 +1,83 @@
+.bleft {
+  width: 250px;
+  background-color: #0a3d62;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Header avec icône + titre */
+.bleft-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacement entre Menu et l'icône */
+  margin-bottom: 20px;
+  cursor: pointer; /* On montre que c'est cliquable */
+}
+
+.menu-title {
+  font-size: 20px;
+  margin: 0;
+  color: white;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Rotation de l'icône quand ouvert */
+.menu-icon.open {
+  transform: rotate(90deg);
+}
+
+/* Liste principale (robotique...) */
+.bleft ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.bleft ul li {
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  background-color: #1e5a89;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bleft ul li:hover {
+  background-color: #2e86de;
+}
+
+/* Liste supplémentaire (accessoires...) */
+.extra-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.extra-menu li {
+  padding: 12px 10px;
+  margin-bottom: 8px;
+  background-color: #144a75;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.extra-menu li:hover {
+  background-color: #2e86de;
+}
+
+/* Cacher une liste */
+.hidden {
+  display: none;
+}
